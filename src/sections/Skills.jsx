@@ -41,10 +41,12 @@ const skillCategories = [
     ],
   },
   {
-    title: "Tools & Others",
+    title: "Tools & languas",
     description: "Leveraging modern workflows, developer tooling, and cloud environments.",
     skills: [
       { name: "Git & GitHub", icon: GitBranch, tag: "Version Control" },
+      { name: "Java", icon: Code2, tag: "Language" },
+      { name: "Python", icon: FileCode2, tag: "Language" },
       { name: "AI Tools & APIs", icon: Sparkles, tag: "AI/LLM" },
       { name: "Vite", icon: Zap, tag: "Build Tool" },
       { name: "Postman", icon: Terminal, tag: "API Testing" },
@@ -143,6 +145,70 @@ export const Skills = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Floating Marquee Ribbon */}
+        <div className="mt-20 animate-fade-in animation-delay-400">
+          <div className="text-center mb-6">
+            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
+              ✦ CONTINUOUSLY EXPANDING TECH STACK ✦
+            </span>
+          </div>
+
+          <div className="relative overflow-hidden glass py-4 rounded-2xl border border-primary/20">
+            {/* Left & Right Gradient Shadows */}
+            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-36 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-36 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
+
+            <div className="flex animate-marquee whitespace-nowrap gap-6 items-center">
+              {[
+                "Java",
+                "Python",
+                "React.js",
+                "TypeScript",
+                "JavaScript",
+                "Spring Boot",
+                "Node.js",
+                "Express.js",
+                "PostgreSQL",
+                "MySQL",
+                "MongoDB",
+                "REST APIs",
+                "Tailwind CSS",
+                "Docker",
+                "Git & GitHub",
+                "Vite",
+                "Postman",
+                "Java",
+                "Python",
+                "React.js",
+                "TypeScript",
+                "JavaScript",
+                "Spring Boot",
+                "Node.js",
+                "Express.js",
+                "PostgreSQL",
+                "MySQL",
+                "MongoDB",
+                "REST APIs",
+                "Tailwind CSS",
+                "Docker",
+                "Git & GitHub",
+                "Vite",
+                "Postman",
+              ].map((tech, idx) => (
+                <div
+                  key={idx}
+                  className="flex items-center gap-3 px-4 py-2 rounded-xl bg-surface/70 border border-border/60 hover:border-primary/50 hover:bg-primary/10 transition-all duration-300 group/pill cursor-default"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary group-hover/pill:scale-125 transition-transform" />
+                  <span className="text-sm font-semibold text-muted-foreground group-hover/pill:text-foreground transition-colors">
+                    {tech}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

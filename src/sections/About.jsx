@@ -49,30 +49,30 @@ export const About = () => {
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
-                I'm a passionate software engineer with over 5 years of
-                experience crafting digital products that make a difference. My
-                journey started with a curiosity for how things work on the web,
-                and it has evolved into a deep expertise in modern frontend
-                technologies.
+                I am an Information Technology undergraduate at the University of
+                Moratuwa with a strong passion for software engineering, full-stack
+                development, and problem-solving. My journey began with a
+                curiosity for how technology works, which has grown into a drive
+                to build impactful, reliable digital products.
               </p>
               <p>
-                I specialize in React, Next.js, and TypeScript, building
-                everything from sleek landing pages to complex enterprise
-                applications. My approach combines technical excellence with a
-                keen eye for design and user experience.
+                I enjoy working across the stack — from developing interactive
+                frontends with React &amp; Tailwind CSS to engineering robust
+                backends with Java (Spring Boot), Python, and Node.js. Whether
+                it's robotics and computer vision like SortMaster or full-stack web
+                apps, I love turning ideas into working prototypes.
               </p>
               <p>
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or sharing knowledge with
-                the developer community.
+                Currently, I am actively seeking a Software Engineering Internship
+                where I can contribute my technical skills, collaborate with
+                experienced teams, and tackle real-world engineering challenges.
               </p>
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
               <p className="text-lg font-medium italic text-foreground">
-                "My mission is to create digital experiences that are not just
-                functional, but truly delightful — products that users love to
-                use and developers love to maintain."
+                "Passionate about turning complex real-world challenges into
+                clean, scalable, and impactful software solutions."
               </p>
             </div>
           </div>

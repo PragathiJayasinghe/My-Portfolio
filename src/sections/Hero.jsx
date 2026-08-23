@@ -42,20 +42,20 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 pt-28 pb-16 md:pt-32 md:pb-20 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            <div className="animate-fade-in">
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+            <div className="animate-fade-in flex justify-center lg:justify-start">
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full glass text-xs sm:text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 IT Undergraduate • University of Moratuwa
               </span>
             </div>
 
             {/* Headline */}
-            <div className="space-y-4">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Crafting <span className="text-primary glow-text">digital</span>
                 <br />
                 experiences with
@@ -64,7 +64,7 @@ export const Hero = () => {
                   precision.
                 </span>
               </h1>
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in animation-delay-200 leading-relaxed">
                 Hi, I'm Pragathi Jayasinghe — an IT undergraduate at the
                 University of Moratuwa with a passion for software development.
                 I love turning complex challenges into clean, scalable
@@ -73,18 +73,18 @@ export const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg" href="#contact">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 animate-fade-in animation-delay-300">
+              <Button size="lg" href="#contact" className="w-full sm:w-auto">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton href="#contact">
+              <AnimatedBorderButton href="#contact" className="w-full sm:w-auto">
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: GithubIcon, href: "https://github.com/PragathiJayasinghe", label: "GitHub" },
@@ -96,7 +96,7 @@ export const Hero = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                  className="p-2.5 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
@@ -104,9 +104,9 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relative animate-fade-in animation-delay-300">
+          <div className="relative animate-fade-in animation-delay-300 px-4 sm:px-0">
             {/* Profile Image */}
-            <div className="relative max-w-md mx-auto">
+            <div className="relative max-w-[280px] xs:max-w-xs sm:max-w-md mx-auto">
               <div
                 className="absolute inset-0 
               rounded-3xl bg-gradient-to-br 
@@ -121,18 +121,18 @@ export const Hero = () => {
                 />
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-4 -right-4 glass rounded-xl px-4 py-3 animate-float">
-                  <div className="flex items-center gap-3">
-                    <div className="w-3 h-3 bg-violet-700 rounded-full animate-pulse" />
-                    <span className="text-sm font-medium">
+                <div className="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 glass rounded-xl px-3 py-2 sm:px-4 sm:py-3 animate-float shadow-lg">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-violet-700 rounded-full animate-pulse" />
+                    <span className="text-xs sm:text-sm font-medium">
                       Available for work
                     </span>
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-sm font-bold text-primary">Pragathi</div>
-                  <div className="text-xs text-muted-foreground">
+                <div className="absolute -top-3 -left-2 sm:-top-4 sm:-left-4 glass rounded-xl px-3 py-2 sm:px-4 sm:py-3 animate-float animation-delay-500 shadow-lg">
+                  <div className="text-xs sm:text-sm font-bold text-primary">Pragathi</div>
+                  <div className="text-[10px] sm:text-xs text-muted-foreground">
                     Jayasinghe
                   </div>
                 </div>

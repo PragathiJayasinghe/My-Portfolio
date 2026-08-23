@@ -41,7 +41,7 @@ const skillCategories = [
     ],
   },
   {
-    title: "Tools & languas",
+    title: "Tools & languages",
     description: "Leveraging modern workflows, developer tooling, and cloud environments.",
     skills: [
       { name: "Git & GitHub", icon: GitBranch, tag: "Version Control" },
@@ -62,44 +62,44 @@ export const Skills = () => {
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-highlight/5 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Technical Expertise
           </span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Skills &amp;{" "}
             <span className="font-serif italic font-normal text-white">
               technologies.
             </span>
           </h2>
-          <p className="text-muted-foreground animate-fade-in animation-delay-200">
+          <p className="text-sm sm:text-base text-muted-foreground animate-fade-in animation-delay-200">
             A structured breakdown of languages, frameworks, databases, and
             tools I use to build scalable end-to-end digital solutions.
           </p>
         </div>
 
         {/* Skills Category Grid */}
-        <div className="grid lg:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-6 sm:gap-8">
           {skillCategories.map((category, idx) => (
             <div
               key={category.title}
-              className="glass rounded-3xl p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group hover:-translate-y-1 glow-border animate-fade-in"
+              className="glass rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 flex flex-col justify-between group hover:-translate-y-1 glow-border animate-fade-in"
               style={{ animationDelay: `${(idx + 1) * 150}ms` }}
             >
               <div>
                 {/* Header */}
                 <div className="mb-6">
                   <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                       {category.title}
                     </h3>
-                    <span className="text-xs px-3 py-1 rounded-full bg-surface border border-border text-muted-foreground font-medium">
+                    <span className="text-xs px-2.5 sm:px-3 py-1 rounded-full bg-surface border border-border text-muted-foreground font-medium">
                       {category.skills.length} skills
                     </span>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                     {category.description}
                   </p>
                 </div>
@@ -108,23 +108,23 @@ export const Skills = () => {
                 <div className="h-[1px] w-full bg-gradient-to-r from-border via-primary/30 to-border mb-6" />
 
                 {/* Skills List */}
-                <div className="space-y-3">
+                <div className="space-y-2.5 sm:space-y-3">
                   {category.skills.map((skill) => {
                     const IconComponent = skill.icon;
                     return (
                       <div
                         key={skill.name}
-                        className="flex items-center justify-between p-3.5 rounded-2xl bg-surface/60 hover:bg-primary/10 border border-border/50 hover:border-primary/30 transition-all duration-300 group/item"
+                        className="flex items-center justify-between p-3 sm:p-3.5 rounded-xl sm:rounded-2xl bg-surface/60 hover:bg-primary/10 border border-border/50 hover:border-primary/30 transition-all duration-300 group/item"
                       >
-                        <div className="flex items-center gap-3.5">
-                          <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:scale-110 transition-transform">
-                            <IconComponent className="w-5 h-5" />
+                        <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover/item:scale-110 transition-transform">
+                            <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
                           </div>
-                          <span className="text-sm font-medium text-foreground group-hover/item:text-primary transition-colors">
+                          <span className="text-xs sm:text-sm font-medium text-foreground group-hover/item:text-primary transition-colors">
                             {skill.name}
                           </span>
                         </div>
-                        <span className="text-xs text-muted-foreground/80 px-2.5 py-1 rounded-lg bg-background/50 border border-border/40 font-mono">
+                        <span className="text-[10px] sm:text-xs text-muted-foreground/80 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md sm:rounded-lg bg-background/50 border border-border/40 font-mono">
                           {skill.tag}
                         </span>
                       </div>
@@ -134,7 +134,7 @@ export const Skills = () => {
               </div>
 
               {/* Bottom decorative bar */}
-              <div className="mt-8 pt-4 border-t border-border/40 flex items-center justify-between text-xs text-muted-foreground">
+              <div className="mt-6 sm:mt-8 pt-4 border-t border-border/40 flex items-center justify-between text-xs text-muted-foreground">
                 <span className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   Active Stack
@@ -149,16 +149,16 @@ export const Skills = () => {
 
         {/* Floating Marquee Ribbon */}
         <div className="mt-12 animate-fade-in animation-delay-400">
-          <div className="text-center mb-6">
-            <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
+          <div className="text-center mb-4 sm:mb-6">
+            <span className="text-[11px] sm:text-xs uppercase tracking-widest text-muted-foreground font-semibold">
               ✦ CONTINUOUSLY EXPANDING TECH STACK ✦
             </span>
           </div>
 
-          <div className="relative overflow-hidden glass py-4 rounded-2xl border border-primary/20">
+          <div className="relative overflow-hidden glass py-3 sm:py-4 rounded-xl sm:rounded-2xl border border-primary/20">
             {/* Left & Right Gradient Shadows */}
-            <div className="absolute left-0 top-0 bottom-0 w-24 md:w-36 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-24 md:w-36 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 md:w-36 bg-gradient-to-r from-background via-background/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 md:w-36 bg-gradient-to-l from-background via-background/80 to-transparent z-10 pointer-events-none" />
 
             <div className="flex animate-marquee whitespace-nowrap gap-6 items-center">
               {[

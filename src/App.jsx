@@ -6,10 +6,12 @@ import { Skills } from "@/sections/Skills";
 import { Experience } from "@/sections/Experience";
 import { Projects } from "@/sections/Projects";
 import { Contact } from "@/sections/Contact";
+import { CustomCursor } from "@/components/CustomCursor";
 
 function App() {
   return (
     <div className="min-h-screen overflow-x-hidden">
+      <CustomCursor />
       <Navbar />
       <main>
         <Hero />

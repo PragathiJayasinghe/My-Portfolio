@@ -1,38 +1,77 @@
-const experiences = [
+import {
+  GraduationCap,
+  Briefcase,
+  HeartHandshake,
+  Calendar,
+  Trophy,
+  Award,
+} from "lucide-react";
+
+const journeyItems = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
-    company: "Tech Innovators Inc.",
+    category: "Education",
+    role: "IT Undergraduate",
+    organization: "University of Moratuwa",
+    period: "2024 — Present",
     description:
-      "Leading frontend architecture for a suite of fintech products. Implemented micro-frontend architecture, reduced bundle size by 40%, and mentored a team of 5 developers.",
-    technologies: ["React", "TypeScript", "Next.js", "GraphQL"],
+      "Pursuing B.Sc. (Hons) in Information Technology. Focusing on software engineering principles, data structures, algorithms, and full-stack web applications.",
+    tags: ["Software Engineering", "DSA", "Web Dev", "OOP", "Database Systems"],
+    icon: GraduationCap,
     current: true,
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Engineer",
-    company: "Digital Solutions Co.",
+    category: "Hackathons",
+    role: "Competitive Programmer",
+    organization: "JapuraXtreme & MoraXtreme",
+    period: "2024 — 2025",
     description:
-      "Built and maintained multiple React applications for enterprise clients. Introduced automated testing practices that improved code coverage to 85%.",
-    technologies: ["React", "Redux", "Jest", "Cypress"],
-    current: false,
+      "Competed in flagship university algorithmic hackathons including JapuraXtreme and MoraXtreme, tackling advanced data structure, optimization, and real-time algorithmic problem-solving challenges.",
+    tags: ["Competitive Programming", "Algorithms", "Data Structures", "Speed Coding"],
+    icon: Trophy,
+    current: true,
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Developer",
-    company: "StartUp Labs",
+    category: "Competitions",
+    role: "Frontend & UI/UX Developer",
+    organization: "Web Design Competitions",
+    period: "2024 — 2025",
     description:
-      "Contributed to the development of a SaaS platform from MVP to production. Collaborated with designers to implement pixel-perfect UI components.",
-    technologies: ["React", "Node.js", "MongoDB", "AWS"],
-    current: false,
+      "Participated in university and inter-university web design hackathons, prototyping and building responsive, accessible, and high-impact web interfaces.",
+    tags: ["Web Design", "UI/UX", "Frontend Dev", "Tailwind CSS", "Responsive Design"],
+    icon: Award,
+    current: true,
   },
   {
-    period: "2018 — 2019",
-    role: "Freelance Developer",
-    company: "Self-Employed",
+    category: "Volunteering",
+    role: "Member — Web & Technology Pillar",
+    organization: "MoraSpirit",
+    period: "2025 — Present",
     description:
-      "Delivered custom web solutions for small businesses and startups. Built 15+ websites and applications, handling everything from design to deployment.",
-    technologies: ["JavaScript", "PHP", "WordPress", "MySQL"],
+      "Contributing to web platform development, digital media maintenance, and technology-driven initiatives for university sports coverage.",
+    tags: ["Web Development", "Teamwork", "Digital Media"],
+    icon: HeartHandshake,
+    current: true,
+  },
+  {
+    category: "Volunteering",
+    role: "Event Volunteer",
+    organization: "IEEE Student Branch & Rotaract Club of UoM",
+    period: "2024 — Present",
+    description:
+      "Actively volunteering in organizing university tech conferences, community service outreach projects, and student leadership workshops.",
+    tags: ["Event Management", "Leadership", "Community Outreach"],
+    icon: HeartHandshake,
+    current: true,
+  },
+  {
+    category: "Work Experience",
+    role: "Banking Intern",
+    organization: "People's Bank",
+    period: "2023 — 2024",
+    description:
+      "Assisted with day-to-day banking operations, handled customer inquiries, managed new account opening processes, and supported staff with financial documentation.",
+    tags: ["Banking Operations", "Customer Relations", "Documentation", "Communication"],
+    icon: Briefcase,
     current: false,
   },
 ];
@@ -40,29 +79,33 @@ const experiences = [
 export const Experience = () => {
   return (
     <section id="experience" className="py-32 relative overflow-hidden">
+      {/* Background Glow */}
       <div
         className="absolute top-1/2 left-1/4 w-96
        h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2"
       />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-80
+       h-80 bg-highlight/5 rounded-full blur-3xl"
+      />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-20">
           <span
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"
           >
-            Career Journey
+            Milestones &amp; Background
           </span>
           <h2
             className="text-4xl md:text-5xl font-bold
            mt-4 mb-6 animate-fade-in animation-delay-100
             text-secondary-foreground"
           >
-            Experience that{" "}
+            Experience &amp;{" "}
             <span className="font-serif italic font-normal text-white">
-              {" "}
-              speaks volumes.
+              journey.
             </span>
           </h2>
 
@@ -70,67 +113,92 @@ export const Experience = () => {
             className="text-muted-foreground
            animate-fade-in animation-delay-200"
           >
-            A timeline of my professional growth, from curious beginner to
-            senior engineer leading teams and building products at scale.
+            A timeline of my academic background, professional internship
+            experience, and university volunteer leadership activities.
           </p>
         </div>
 
         {/* Timeline */}
-        <div className="relative">
-          <div className="timeline-glow absolute left-0 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(32,178,166,0.8)]" />
+        <div className="relative max-w-5xl mx-auto">
+          {/* Central Glow Line */}
+          <div className="timeline-glow absolute left-4 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:-translate-x-1/2 shadow-[0_0_25px_rgba(168,85,247,0.8)]" />
 
-          {/* Experience Items */}
+          {/* Timeline Items */}
           <div className="space-y-12">
-            {experiences.map((exp, idx) => (
-              <div
-                key={idx}
-                className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
-                style={{ animationDelay: `${(idx + 1) * 150}ms` }}
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-0 md:left-1/2 top-0 w-3 h-3 bg-primary rounded-full -translate-x-1/2 ring-4 ring-background z-10">
-                  {exp.current && (
-                    <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-75" />
-                  )}
-                </div>
-
-                {/* Content */}
+            {journeyItems.map((item, idx) => {
+              const IconComponent = item.icon;
+              return (
                 <div
-                  className={`pl-8 md:pl-0 ${
-                    idx % 2 === 0
-                      ? "md:pr-16 md:text-right"
-                      : "md:col-start-2 md:pl-16"
-                  }`}
+                  key={idx}
+                  className="relative grid md:grid-cols-2 gap-8 animate-fade-in"
+                  style={{ animationDelay: `${(idx + 1) * 150}ms` }}
                 >
+                  {/* Timeline Node Dot / Icon */}
+                  <div className="absolute left-4 md:left-1/2 top-6 -translate-x-1/2 z-10 flex items-center justify-center">
+                    <div className="w-9 h-9 rounded-full bg-surface border border-primary/50 flex items-center justify-center text-primary shadow-lg shadow-primary/20">
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+                    {item.current && (
+                      <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-25" />
+                    )}
+                  </div>
+
+                  {/* Content Card */}
                   <div
-                    className={`glass p-6 rounded-2xl border border-primary/30 hover:border-primary/50 transition-all duration-500`}
+                    className={`pl-14 md:pl-0 ${
+                      idx % 2 === 0
+                        ? "md:pr-14 md:text-right"
+                        : "md:col-start-2 md:pl-14"
+                    }`}
                   >
-                    <span className="text-sm text-primary font-medium">
-                      {exp.period}
-                    </span>
-                    <h3 className="text-xl font-semibold mt-2">{exp.role}</h3>
-                    <p className="text-muted-foreground">{exp.company}</p>
-                    <p className="text-sm text-muted-foreground mt-4">
-                      {exp.description}
-                    </p>
-                    <div
-                      className={`flex flex-wrap gap-2 mt-4 ${
-                        idx % 2 === 0 ? "md:justify-end" : ""
-                      }`}
-                    >
-                      {exp.technologies.map((tech, techIdx) => (
-                        <span
-                          key={techIdx}
-                          className="px-3 py-1 bg-surface text-xs rounded-full text-muted-foreground"
-                        >
-                          {tech}
+                    <div className="glass p-6 md:p-8 rounded-3xl border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:-translate-y-1 glow-border group">
+                      <div
+                        className={`flex items-center gap-2 mb-2 text-xs font-semibold uppercase tracking-wider ${
+                          idx % 2 === 0
+                            ? "md:justify-end"
+                            : "justify-start"
+                        }`}
+                      >
+                        <span className="px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20">
+                          {item.category}
                         </span>
-                      ))}
+                        <span className="inline-flex items-center gap-1 text-muted-foreground font-normal">
+                          <Calendar className="w-3 h-3" />
+                          {item.period}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-bold mt-2 text-foreground group-hover:text-primary transition-colors">
+                        {item.role}
+                      </h3>
+                      <p className="text-primary/90 font-medium text-sm mt-0.5">
+                        {item.organization}
+                      </p>
+
+                      <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                        {item.description}
+                      </p>
+
+                      {/* Tags */}
+                      <div
+                        className={`flex flex-wrap gap-2 mt-5 ${
+                          idx % 2 === 0 ? "md:justify-end" : "justify-start"
+                        }`}
+                      >
+                        {item.tags.map((tag, tagIdx) => (
+                          <span
+                            key={tagIdx}
+                            className="px-3 py-1 bg-surface/80 border border-border/50 text-xs rounded-full text-muted-foreground group-hover:border-primary/30 transition-colors"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

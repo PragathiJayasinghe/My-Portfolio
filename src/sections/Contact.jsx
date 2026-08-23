@@ -14,19 +14,19 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "pragathijayasinghe@gmail.com",
-    href: "mailto:pragathijayasinghe@gmail.com",
+    value: "pragathijayasinghe28@gmail.com",
+    href: "mailto:pragathijayasinghe28@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+94715814164",
-    href: "tel:+94715814164",
+    value: "+94 715814164",
+    href: "tel:+94 715814164",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Srilanka",
+    value: "Colombo,Srilanka",
     href: "#",
   },
 ];
@@ -239,13 +239,13 @@ export const Contact = () => {
             {/* Availability Card */}
             <div className="glass rounded-3xl p-8 border border-primary/30">
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                <span className="w-3 h-3 bg-violet-700 rounded-full animate-pulse" />
                 <span className="font-medium">Currently Available</span>
               </div>
               <p className="text-muted-foreground text-sm">
-                I'm currently open to new opportunities and exciting projects.
-                Whether you need a full-time engineer or a freelance consultant,
-                let's talk!
+                I am currently actively looking for a Software Engineering
+                Internship. If you have an open role, an exciting project, or
+                would like to connect, let's talk!
               </p>
             </div>
           </div>

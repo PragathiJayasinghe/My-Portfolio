@@ -1,13 +1,22 @@
-export const AnimatedBorderButton = ({ children }) => {
+export const AnimatedBorderButton = ({
+  children,
+  href,
+  className = "",
+  as,
+  ...props
+}) => {
+  const Component = href || as === "a" ? "a" : "button";
   return (
-    <button
-      className="relative bg-transparent border border-border 
+    <Component
+      href={href}
+      className={`inline-flex items-center justify-center relative bg-transparent border border-border 
         text-foreground hover:border-primary/50 transition-all 
         duration-1000 focus:outline-none focus-visible:ring-2 
         focus-visible:ring-primary focus-visible:ring-offset-2 
         disabled:opacity-50 disabled:cursor-not-allowed group 
         px-8 py-4 text-lg font-medium rounded-full overflow-visible 
-        animated-border"
+        animated-border cursor-pointer ${className}`}
+      {...props}
     >
       {/* Animated SVG Border */}
       <svg
@@ -31,6 +40,6 @@ export const AnimatedBorderButton = ({ children }) => {
       <span className="relative z-10 flex items-center justify-center gap-2">
         {children}
       </span>
-    </button>
+    </Component>
   );
-};
+};

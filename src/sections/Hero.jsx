@@ -42,10 +42,10 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 pt-28 pb-16 md:pt-32 md:pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 pt-24 pb-20 md:py-0 relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center min-h-[calc(100vh-140px)] md:min-h-[auto]">
           {/* Left Column - Text Content */}
-          <div className="space-y-6 sm:space-y-8 text-center lg:text-left">
+          <div className="space-y-6 sm:space-y-7 text-center lg:text-left flex flex-col justify-center">
             <div className="animate-fade-in flex justify-center lg:justify-start">
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full glass text-xs sm:text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
@@ -55,7 +55,7 @@ export const Hero = () => {
 
             {/* Headline */}
             <div className="space-y-3 sm:space-y-4">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] font-bold leading-[1.1] animate-fade-in animation-delay-100">
                 Crafting <span className="text-primary glow-text">digital</span>
                 <br />
                 experiences with
@@ -84,7 +84,7 @@ export const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-400">
+            <div className="flex items-center justify-center lg:justify-start gap-4 animate-fade-in animation-delay-400 pt-1">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
                 { icon: GithubIcon, href: "https://github.com/PragathiJayasinghe", label: "GitHub" },
@@ -104,9 +104,9 @@ export const Hero = () => {
             </div>
           </div>
           {/* Right Column - Profile Image */}
-          <div className="relative animate-fade-in animation-delay-300 px-4 sm:px-0">
-            {/* Profile Image */}
-            <div className="relative max-w-[280px] xs:max-w-xs sm:max-w-md mx-auto">
+          <div className="relative animate-fade-in animation-delay-300 px-4 sm:px-0 flex items-center justify-center">
+            {/* Profile Image Card */}
+            <div className="relative max-w-[270px] xs:max-w-xs sm:max-w-sm lg:max-w-[360px] w-full mx-auto">
               <div
                 className="absolute inset-0 
               rounded-3xl bg-gradient-to-br 
@@ -117,12 +117,12 @@ export const Hero = () => {
                 <img
                   src="/profile-picture.jpg"
                   alt="Pragathi Jayasinghe"
-                  className="w-full aspect-4/5 object-cover rounded-2xl"
+                  className="w-full aspect-[4/4.8] max-h-[460px] object-cover rounded-2xl"
                 />
 
                 {/* Floating Badge */}
-                <div className="absolute -bottom-3 -right-2 sm:-bottom-4 sm:-right-4 glass rounded-xl px-3 py-2 sm:px-4 sm:py-3 animate-float shadow-lg">
-                  <div className="flex items-center gap-2 sm:gap-3">
+                <div className="absolute -bottom-3 -right-2 sm:-bottom-3 sm:-right-3 glass rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 animate-float shadow-xl border border-border/60">
+                  <div className="flex items-center gap-2 sm:gap-2.5">
                     <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-violet-700 rounded-full animate-pulse" />
                     <span className="text-xs sm:text-sm font-medium">
                       Available for work
@@ -130,7 +130,7 @@ export const Hero = () => {
                   </div>
                 </div>
                 {/* Stats Badge */}
-                <div className="absolute -top-3 -left-2 sm:-top-4 sm:-left-4 glass rounded-xl px-3 py-2 sm:px-4 sm:py-3 animate-float animation-delay-500 shadow-lg">
+                <div className="absolute -top-3 -left-2 sm:-top-3 sm:-left-3 glass rounded-xl px-3 py-2 sm:px-4 sm:py-2.5 animate-float animation-delay-500 shadow-xl border border-border/60">
                   <div className="text-xs sm:text-sm font-bold text-primary">Pragathi</div>
                   <div className="text-[10px] sm:text-xs text-muted-foreground">
                     Jayasinghe
@@ -143,13 +143,13 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-500">
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-500 z-20">
         <a
           href="#about"
-          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+          className="flex flex-col items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors group"
         >
-          <span className="text-xs uppercase tracking-wider font-medium">Scroll</span>
-          <ChevronDown className="w-5 h-5 animate-bounce text-primary" />
+          <span className="text-[11px] uppercase tracking-wider font-medium">Scroll</span>
+          <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 animate-bounce text-primary" />
         </a>
       </div>
     </section>

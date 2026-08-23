@@ -23,7 +23,7 @@ const journeyItems = [
     category: "Hackathons",
     role: "Competitive Programmer",
     organization: "JapuraXtreme & MoraXtreme",
-    period: "2024 — 2025",
+    period: "2024 — Present",
     description:
       "Competed in flagship university algorithmic hackathons including JapuraXtreme and MoraXtreme, tackling advanced data structure, optimization, and real-time algorithmic problem-solving challenges.",
     tags: ["Competitive Programming", "Algorithms", "Data Structures", "Speed Coding"],
@@ -34,7 +34,7 @@ const journeyItems = [
     category: "Competitions",
     role: "Frontend & UI/UX Developer",
     organization: "Web Design Competitions",
-    period: "2024 — 2025",
+    period: "2024 — Present",
     description:
       "Participated in university and inter-university web design hackathons, prototyping and building responsive, accessible, and high-impact web interfaces.",
     tags: ["Web Design", "UI/UX", "Frontend Dev", "Tailwind CSS", "Responsive Design"],

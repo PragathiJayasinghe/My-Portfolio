@@ -42,8 +42,8 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 pt-24 pb-20 md:py-0 relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center min-h-[calc(100vh-140px)] md:min-h-[auto]">
+      <div className="container mx-auto px-4 sm:px-6 pt-32 sm:pt-36 md:pt-40 pb-20 md:pb-24 relative z-10 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6 sm:space-y-7 text-center lg:text-left flex flex-col justify-center">
             <div className="animate-fade-in flex justify-center lg:justify-start">

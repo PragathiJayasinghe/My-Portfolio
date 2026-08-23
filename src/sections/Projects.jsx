@@ -3,13 +3,13 @@ import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { GithubIcon } from "@/components/Icons";
 const projects = [
   {
-    title: "Fintech Dashboard",
+    title: "SortMaster – Automated Sorting System",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/projects/project1.svg",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
-    github: "#",
+      "An automated object sorting system powered by computer vision and robotics. Uses OpenCV + pyzbar for QR detection, a 6-DOF robotic arm for precision sorting, and a real-time web app for monitoring.",
+    image: "/projects/Project1.jpg",
+    tags: ["OpenCV", "Python", "Raspberry Pi", "Arduino", "Robotics", "React"],
+    link: "https://github.com/n1s1th/QR_Based_Sorting_Robot_Arm",
+    github: "https://github.com/n1s1th/QR_Based_Sorting_Robot_Arm",
   },
   {
     title: "E-Commerce Platform",

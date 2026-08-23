@@ -57,14 +57,14 @@ const skillCategories = [
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-32 relative overflow-hidden">
+    <section id="skills" className="py-20 lg:py-24 relative overflow-hidden">
       {/* Background Glow Accents */}
       <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-highlight/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">
             Technical Expertise
           </span>
@@ -148,7 +148,7 @@ export const Skills = () => {
         </div>
 
         {/* Floating Marquee Ribbon */}
-        <div className="mt-20 animate-fade-in animation-delay-400">
+        <div className="mt-12 animate-fade-in animation-delay-400">
           <div className="text-center mb-6">
             <span className="text-xs uppercase tracking-widest text-muted-foreground font-semibold">
               ✦ CONTINUOUSLY EXPANDING TECH STACK ✦

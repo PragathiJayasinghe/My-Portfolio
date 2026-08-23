@@ -78,7 +78,7 @@ const journeyItems = [
 
 export const Experience = () => {
   return (
-    <section id="experience" className="py-32 relative overflow-hidden">
+    <section id="experience" className="py-20 lg:py-24 relative overflow-hidden">
       {/* Background Glow */}
       <div
         className="absolute top-1/2 left-1/4 w-96
@@ -91,7 +91,7 @@ export const Experience = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <span
             className="text-secondary-foreground text-sm
            font-medium tracking-wider uppercase animate-fade-in"

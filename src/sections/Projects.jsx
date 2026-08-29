@@ -29,15 +29,6 @@ const projects = [
     link: "https://quiz.moraspirit.com",
     github: "https://github.com/moraspirit/epilogue-quiz-game-web-app",
   },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.svg",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
 ];
 
 export const Projects = () => {

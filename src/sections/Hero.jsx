@@ -77,7 +77,12 @@ export const Hero = () => {
               <Button size="lg" href="#contact" className="w-full sm:w-auto">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton href="#contact" className="w-full sm:w-auto">
+              <AnimatedBorderButton
+                href="/Pragathi_Jayasinghe_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>

@@ -62,7 +62,7 @@ export const Preloader = ({ onFinish }) => {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-[#0d0b14] overflow-hidden pointer-events-auto border-b border-primary/30 shadow-[0_20px_50px_rgba(168,85,247,0.3)] transition-transform duration-800 will-change-transform"
+      className="fixed inset-0 z-[10000] flex flex-col items-center justify-center bg-background overflow-hidden pointer-events-auto border-b border-primary/20 shadow-[0_20px_40px_rgba(168,85,247,0.15)] transition-transform duration-800 will-change-transform"
       style={{
         transform: isExiting ? "translateY(-100%)" : "translateY(0%)",
         transitionTimingFunction: "cubic-bezier(0.77, 0, 0.175, 1)",

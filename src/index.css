@@ -1,6 +1,53 @@
 @import "tailwindcss";
 
 @theme {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+
+  --color-card: var(--color-card);
+
+  --color-primary: var(--color-primary);
+  --color-primary-foreground: var(--color-primary-foreground);
+
+  --color-secondary: var(--color-secondary);
+  --color-secondary-foreground: var(--color-secondary-foreground);
+
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+
+  --color-border: var(--color-border);
+
+  --radius: 0.75rem;
+
+  --color-highlight: var(--color-highlight);
+  --color-surface: var(--color-surface);
+}
+
+:root {
+  /* Light Theme */
+  --color-background: #fbf9ff;
+  --color-foreground: #140e24;
+
+  --color-card: #ffffff;
+
+  --color-primary: #8b5cf6;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #f3edfc;
+  --color-secondary-foreground: #7c3aed;
+
+  --color-muted: #ece5f7;
+  --color-muted-foreground: #6c6382;
+
+  --color-border: #ded4f1;
+
+  --color-highlight: #db2777;
+  --color-surface: #f4effd;
+}
+
+.dark,
+[data-theme="dark"] {
+  /* Dark Theme */
   --color-background: #0d0b14;
   --color-foreground: #f3f0fa;
 
@@ -16,8 +63,6 @@
   --color-muted-foreground: #948aa8;
 
   --color-border: #2d2447;
-
-  --radius: 0.75rem;
 
   --color-highlight: #ec4899;
   --color-surface: #191428;
@@ -36,6 +81,7 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   .font-serif {

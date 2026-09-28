@@ -41,7 +41,7 @@ export const About = () => {
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Building the future,
-              <span className="font-serif italic font-normal text-white">
+              <span className="font-serif italic font-normal text-foreground">
                 {" "}
                 one component at a time.
               </span>

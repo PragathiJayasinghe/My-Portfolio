@@ -45,7 +45,7 @@ export const Projects = () => {
           </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-3 sm:mt-4 mb-4 sm:mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
             Projects that
-            <span className="font-serif italic font-normal text-white">
+            <span className="font-serif italic font-normal text-foreground">
               {" "}
               make an impact.
             </span>

@@ -91,7 +91,7 @@ export const CustomCursor = () => {
       <div
         className={`fixed top-0 left-0 rounded-full bg-primary transition-all duration-100 ease-out will-change-transform ${
           isHovered
-            ? "w-2.5 h-2.5 bg-white shadow-[0_0_12px_#ffffff]"
+            ? "w-2.5 h-2.5 bg-primary dark:bg-white shadow-[0_0_12px_rgba(168,85,247,0.8)]"
             : isClicked
             ? "w-1.5 h-1.5 bg-secondary-foreground"
             : "w-2 h-2 shadow-[0_0_8px_rgba(168,85,247,0.8)]"

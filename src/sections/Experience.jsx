@@ -104,7 +104,7 @@ export const Experience = () => {
             text-secondary-foreground"
           >
             Experience &amp;{" "}
-            <span className="font-serif italic font-normal text-white">
+            <span className="font-serif italic font-normal text-foreground">
               journey.
             </span>
           </h2>

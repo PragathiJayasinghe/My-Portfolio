@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -53,21 +54,25 @@ export const Navbar = () => {
           </div>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
+        {/* Desktop Actions */}
+        <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <Button size="sm" href="#contact">
             Contact Me
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2 text-foreground cursor-pointer rounded-xl glass hover:bg-surface transition-colors"
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* Mobile Header Actions */}
+        <div className="flex md:hidden items-center gap-2">
+          <ThemeToggle />
+          <button
+            className="p-2 text-foreground cursor-pointer rounded-xl glass hover:bg-surface transition-colors"
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu Drawer */}

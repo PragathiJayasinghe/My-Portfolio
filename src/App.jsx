@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ThemeProvider } from "@/context/ThemeContext";
 import { Navbar } from "@/layout/Navbar";
 import { Footer } from "@/layout/Footer";
 import { Hero } from "@/sections/Hero";
@@ -14,7 +15,7 @@ function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
-    <>
+    <ThemeProvider>
       <Preloader onFinish={() => setIsLoaded(true)} />
       <div
         className={`min-h-screen overflow-x-hidden transition-all duration-1000 ease-out ${
@@ -35,7 +36,7 @@ function App() {
         </main>
         <Footer />
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

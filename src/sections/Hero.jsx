@@ -19,7 +19,7 @@ export const Hero = () => {
         <img
           src="/hero-bg.jpg"
           alt="Hero image"
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-20 dark:opacity-40"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
       </div>
@@ -31,7 +31,7 @@ export const Hero = () => {
             key={dot.id}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
-              backgroundColor: "#a855f7",
+              backgroundColor: "var(--color-primary)",
               left: dot.left,
               top: dot.top,
               animation: `slow-drift ${dot.duration} ease-in-out infinite`,
@@ -60,7 +60,7 @@ export const Hero = () => {
                 <br />
                 experiences with
                 <br />
-                <span className="font-serif italic font-normal text-white">
+                <span className="font-serif italic font-normal text-foreground">
                   precision.
                 </span>
               </h1>
